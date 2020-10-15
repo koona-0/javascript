@@ -2,9 +2,7 @@
 // 바닐라 자바스크립트에서 쓰기, 실수 방지
 'use strict';
 
-// 2. Mutable Variable
-// let
-
+// 2. let, rw(read/write)
 // 옛날엔 var 사용 -> 쓰면 안됨 // 선언 전 값 할당 가능
 // var hoisting : var를 어디에 선언하든 상관없이 항상 제일 위로 끌어 올려줌
 // 블럭 스코핑도 무시함
@@ -19,17 +17,26 @@ let globalName = 'global name';
 console.log(name);
 console.log(globalName);
 
-// 3. Immutable Variable
-// Constants
+// 3. Constant, r(read only)
 // 한 번 할당하면 값이 절대 안바뀜
 // 특) 보안, 쓰레드 안정성, 실수 방지
 // 변경되어서 좋을 이유가 없다면 const 사용하기
 const dasInWeek = 7;
 const maxNumber = 5;
 
+
+// 정리
+// Immutable Variable : premitive types, frozen objects (i.e. object.freeze())
+// 데이터 자체를 절대 변경하지 못함
+// Mutable Variable : all objects by default are mutable in JS
+// 자바 스크립트는 기본적으로 모든 오브젝트가 변경 가능함
+
+
 // 4. Variable type
 // primitive, single item : number, string, boolean, null, undefined, symbol
+// primitive 타입은 value로 값이 저장됨
 // object, Box container
+// object는 object가 가리키는 주소가 저장됨
 // function, first-class function
 const count = 17;   //integer number
 const size = 17.1;  //decimal number
